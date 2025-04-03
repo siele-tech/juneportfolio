@@ -1,0 +1,84 @@
+/* ----- POPPINS FONT Link ----- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ----- VARIABLES ----- */
+:root{
+    --body-color: rgb(250, 250, 250);
+	--color-white: rgb(255, 255, 255);
+
+	--text-color-second: rgb(68, 68, 68);
+	--text-color-third: rgb(30, 159, 171);
+
+	--first-color: rgb(110, 87, 224);
+	--first-color-hover: rgb(40, 91, 212);
+
+	--second-color: rgb(0, 201, 255);
+	--third-color: rgb(192, 166, 49);
+    --first-shadow-color: rgba(0, 0, 0, 0.1);
+
+}
+
+/* ----- BASE ----- */
+
+
+/* ----- SMOOTH SCROLL ----- */
+
+
+/* ----- CHANGE THE SCROLL BAR DESIGN ----- */
+
+
+/* ---##-- REUSABLE CSS --##--- */
+
+/* ----- GLOBAL BUTTON DESIGN ----- */
+
+
+/* ----- GLOBAL ICONS DESIGN ----- */
+
+/* ------- BASE -------- */
+
+
+/* ----- NAVIGATION BAR ----- */
+
+
+/* ----- WRAPPER DESIGN ----- */
+
+
+/* ----- FEATURED BOX ----- */
+
+
+/* ----- FEATURED TEXT BOX ----- */
+
+
+
+/* ----- FEATURED IMAGE BOX ----- */
+
+/* ----- MAIN BOX ----- */
+
+
+/* -- ## --- RESUABLE CSS -- ## -- */
+
+/* ----- ABOUT INFO ----- */
+
+
+/* ----- ABOUT / SKILLS BOX ----- */
+
+
+/* ----- PROJECTS BOX ----- */
+
+/* ----- CONTACT BOX ----- */
+
+
+/* ----- CONTACT FORM ----- */
+
+
+/* ----- FOOTER BOX ----- */
+
+
+
+/* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
+
+
+/* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
+
+/* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
+
