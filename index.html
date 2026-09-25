@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="June Siele — Full-Stack Developer & Data Analyst. MERN web applications, APIs and integrations, and data analysis with Python, SQL and Power BI.">
 
-    <!-- --------- UNICONS ---------- -->
+    <!-- --------- SOCIAL PREVIEW ---------- -->
+    <meta property="og:title" content="June Siele | Full-Stack Developer & Data Analyst">
+    <meta property="og:description" content="MERN web applications, APIs and integrations, and data analysis with Python, SQL and Power BI.">
+    <meta property="og:type" content="website">
+
+    <!-- --------- UNICONS (UI icons) ---------- -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- --------- DEVICON (tech logos) ---------- -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
 
     <!-- --------- CSS ---------- -->
     <link rel="stylesheet" href="style.css">
@@ -13,197 +22,522 @@
     <!-- --------- FAVICON ---------- -->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 
-    <title>Portfolio | June</title>
+    <!-- lets the CSS know JavaScript is running (used by the scroll animations) -->
+    <script>document.documentElement.classList.add("js");</script>
+
+    <title>June Siele | Full-Stack Developer & Data Analyst</title>
 </head>
 <body>
    <div class="container">
     <!-- --------------- HEADER --------------- -->
       <nav id="header">
-        <div class="nav-logo">
+       <div class="scroll-progress" aria-hidden="true"></div>
+       <div class="nav-inner">
+        <a href="#home" class="nav-logo" aria-label="June Siele — back to top">
             <p class="nav-name">June Siele</p>
             <span>.</span>
-        </div>
+        </a>
         <div class="nav-menu" id="myNavMenu">
             <ul class="nav_menu_list">
-                <li class="nav_list">
-                    <a href="#home" class="nav-link active-link">Home</a>
-                    <div class="circle"></div>
-                </li>
-                <li class="nav_list">
-                    <a href="#about" class="nav-link">About</a>
-                    <div class="circle"></div>
-                </li>
-                <li class="nav_list">
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <div class="circle"></div>
-                </li>
-                <li class="nav_list">
-                    <a href="#contact" class="nav-link">Contact</a>
-                    <div class="circle"></div>
-                </li>
+                <li class="nav_list"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav_list"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav_list"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav_list"><a href="#data" class="nav-link">Data</a></li>
+                <li class="nav_list"><a href="#journey" class="nav-link">Journey</a></li>
+                <li class="nav_list"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
         <div class="nav-button">
-            <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
+            <a href="https://github.com/siele-tech" class="btn btn-outline" target="_blank" rel="noopener">
+                <i class="uil uil-github-alt"></i> GitHub
+            </a>
         </div>
-        <div class="nav-menu-btn">
-            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
-        </div>
+        <button class="nav-menu-btn" onclick="myMenuFunction()" aria-label="Toggle menu" aria-controls="myNavMenu" aria-expanded="false">
+            <i class="uil uil-bars"></i>
+        </button>
+       </div>
       </nav>
 
 
     <!-- -------------- MAIN ---------------- -->
     <main class="wrapper">
-       <!-- -------------- FEATURED BOX ---------------- -->
+       <!-- -------------- FEATURED BOX (HERO) ---------------- -->
        <section class="featured-box" id="home">
           <div class="featured-text">
-            <div class="featured-text-card">
-                <span>June Siele</span>
-            </div>
-            <div class="featured-name">
-                <p>I'm <span class="typedText"></span></p>
-            </div>
-            <div class="featured-text-info">
-                <p>Experienced fullstack  developer with a passion for creating visually stunning
-                   and user-friendly websites.
-                </p>
-            </div>
+            <p class="status-badge"><span class="status-dot"></span> Open to full-stack &amp; data roles</p>
+            <p class="featured-greeting">Hi, I'm <span>June Siele</span></p>
+            <h1 class="featured-name">
+                <span>Full-Stack Developer</span>
+                <span><span class="amp">&amp;</span> <span class="gradient-text">Data Analyst</span></span>
+            </h1>
+            <p class="featured-text-info">
+                I build web applications with React, Node.js and Express, and analyse data
+                with Python, SQL and Power BI, so I can work on both the product and the numbers behind it.
+            </p>
             <div class="featured-text-btn">
-                <button class="btn blue-btn">Hire Me</button>
-                <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
-            </div>
-            <div class="social_icons">
-                <div class="icon"><i class="uil uil-instagram"></i></div>
-                <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
-                <div class="icon"><i class="uil uil-dribbble"></i></div>
-                <div class="icon"><i class="uil uil-github-alt"></i></div>
+                <a href="#projects" class="btn blue-btn">View Projects <i class="uil uil-arrow-down"></i></a>
+                <a href="https://github.com/siele-tech" class="btn btn-outline" target="_blank" rel="noopener"><i class="uil uil-github-alt"></i> GitHub</a>
+                <a href="#contact" class="btn btn-text">Contact Me <i class="uil uil-arrow-right"></i></a>
             </div>
           </div>
           <div class="featured-image">
-            <div class="image">
-                <img src="assets/images/panda.jpeg" alt="avatar">
+            <div class="portrait">
+                <span class="monogram" aria-hidden="true">JS</span>
+                <!-- Your photo: save it as assets/images/june.jpg (portrait works best) -->
+                <img src="assets/images/june.jpg" alt="June Siele" onerror="this.remove()">
+            </div>
+            <div class="photo-chip">
+                <i class="uil uil-graduation-cap"></i>
+                <div>
+                    <strong>BSc IT · 2026</strong>
+                    <span>Multimedia University of Kenya</span>
+                </div>
             </div>
           </div>
-          <div class="scroll-icon-box">
-            <a href="#about" class="scroll-btn">
-                <i class="uil uil-mouse-alt"></i>
-                <p>Scroll Down</p>
-            </a>
-          </div>
-
        </section>
+
+       <!-- -------------- TECH LOGO ROW ---------------- -->
+       <div class="logo-row reveal">
+          <p class="logo-row-title">Technologies I work with</p>
+          <ul>
+             <li><i class="devicon-react-original"></i>React</li>
+             <li><i class="devicon-javascript-plain"></i>JavaScript</li>
+             <li><i class="devicon-nodejs-plain"></i>Node.js</li>
+             <li><i class="devicon-express-original"></i>Express</li>
+             <li><i class="devicon-mongodb-plain"></i>MongoDB</li>
+             <li><i class="devicon-python-plain"></i>Python</li>
+             <li><i class="devicon-pandas-plain"></i>Pandas</li>
+             <li><i class="devicon-mysql-original"></i>MySQL</li>
+             <li><i class="devicon-firebase-plain"></i>Firebase</li>
+          </ul>
+       </div>
+
        <!-- -------------- ABOUT BOX ---------------- -->
        <section class="section" id="about">
-          <div class="top-header">
-            <h1>About Me</h1>
+          <div class="top-header reveal">
+            <p class="eyebrow">01 · About</p>
+            <h2>About Me</h2>
           </div>
           <div class="row">
-            <div class="col">
-                <div class="about-info">
-                    <h3>My introduction</h3>
-                    <p>I am well-versed in HTML, CSS and JavaScript , and other cutting edge
-                       frameworks and libraries,which allows me to implement interactive features.
-                       Additionally, I have experirence working with content management systems (CMS) like
-                       WordPress.
-                    </p>
-                    <div class="about-btn">
-                        <button class="btn">Download CV <i class="uil uil-import"></i></button>
-                    </div>
-                </div>
+            <div class="col about-text reveal">
+                <p class="about-lead">
+                    From MERN web apps to Python and Power BI analysis, I like building things people
+                    actually use, and finding what the data behind them says.
+                </p>
+                <p>
+                    I'm an IT graduate (BSc Information Technology, Multimedia University of Kenya) who works across
+                    web development and data. I completed Full-Stack Development training with Power Learn Project,
+                    focused on the MERN stack,
+                    and I've built applications including a savings-group (chama) platform and a grievance
+                    redressal system with an AI chatbot.
+                </p>
+                <p>
+                    On the data side, I clean, analyse and visualise data with Python, Pandas, SQL and Power BI.
+                    My final-year project combined NSE stock-market data with social-media sentiment analysis.
+                    My experience as a Growth Hacker &amp; Software Developer at Wakandi Labs adds the growth side:
+                    email and SMS marketing, SEO and marketing analytics.
+                    I'm most interested in practical problems: tools people rely on every day, and data that
+                    helps them make decisions.
+                </p>
             </div>
-            <div class="col">
-                <div class="skills-box">
-                    <div class="skills-header">
-                        <h3>Frontend</h3>
+            <div class="col reveal">
+                <dl class="spotlight about-info">
+                    <div class="fact">
+                        <dt><i class="uil uil-graduation-cap"></i> Education</dt>
+                        <dd>BSc Information Technology · Multimedia University of Kenya, 2026</dd>
                     </div>
-                    <div class="skills-list">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Bootstrap</span>
-                        <span>JavaScript</span>
-                        <span>Vue</span>
-                        <span>React</span>
-                        <span>Angular</span>
+                    <div class="fact">
+                        <dt><i class="uil uil-award"></i> Training</dt>
+                        <dd>Power Learn Project: Full-Stack Development (MERN)</dd>
                     </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skills-header">
-                        <h3>Backend</h3>
+                    <div class="fact">
+                        <dt><i class="uil uil-briefcase-alt"></i> Experience</dt>
+                        <dd>Wakandi Labs: Growth Hacker &amp; Software Developer<br>Tegat Tea Factory: IT attachment</dd>
                     </div>
-                    <div class="skills-list">
-                        <span>PHP</span>
-                        <span>JAVA</span>
-                        <span>Python</span>
-                        <span>C++</span>
+                    <div class="fact">
+                        <dt><i class="uil uil-crosshair"></i> Focus</dt>
+                        <dd>Web applications · APIs &amp; integrations · Data analysis · Growth</dd>
                     </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skills-header">
-                        <h3>Database</h3>
-                    </div>
-                    <div class="skills-list">
-                        <span>MySQL</span>
-                        <span>PostgreSQL</span>
-                        <span>MongoDB</span>
-                    </div>
-                </div>
+                </dl>
             </div>
           </div>
        </section>
 
-       <!-- -------------- PROJECT BOX ---------------- -->
-
-       <section class="section" id="projects">
-          <div class="top-header">
-              <h1>Projects</h1>
+       <!-- -------------- SKILLS / TECH STACK ---------------- -->
+       <!-- Plain chip = hands-on experience. Add class "chip--familiar" for working knowledge. -->
+       <section class="section section-alt" id="skills">
+          <div class="top-header reveal">
+            <p class="eyebrow">02 · Tech Stack</p>
+            <h2>What I Work With</h2>
+            <p class="legend">
+                <span class="legend-item"><span class="swatch"></span>Hands-on</span>
+                <span class="legend-item"><span class="swatch swatch--familiar"></span>Working knowledge</span>
+            </p>
           </div>
-          <div class="project-container">
-            <div class="project-box">
-                <i class="uil uil-briefcase-alt"></i>
-                <h3>Completed</h3>
-                <label>15+ Finished Projects</label>
+          <div class="skills-grid">
+            <div class="spotlight skills-box skills-wide skills-core reveal">
+                <h3><i class="uil uil-window"></i> Frontend</h3>
+                <ul class="chip-list">
+                    <li class="chip"><i class="devicon-react-original colored"></i>React</li>
+                    <li class="chip"><i class="devicon-javascript-plain colored"></i>JavaScript (ES6+)</li>
+                    <li class="chip"><i class="devicon-html5-plain colored"></i>HTML5</li>
+                    <li class="chip"><i class="devicon-css3-plain colored"></i>CSS3</li>
+                    <li class="chip"><i class="devicon-typescript-plain colored"></i>TypeScript</li>
+                    <li class="chip"><i class="devicon-nextjs-plain"></i>Next.js</li>
+                    <li class="chip"><i class="devicon-tailwindcss-original colored"></i>Tailwind CSS</li>
+                    <li class="chip">Responsive UI</li>
+                </ul>
             </div>
-            <div class="project-box">
-                <i class="uil uil-users-alt"></i>
-                <h3>Clients</h3>
-                <label>25+ Happy Clients</label>
+            <div class="spotlight skills-box skills-wide skills-core reveal">
+                <h3><i class="uil uil-chart-line"></i> Data &amp; Analytics</h3>
+                <ul class="chip-list">
+                    <li class="chip"><i class="devicon-python-plain colored"></i>Python</li>
+                    <li class="chip"><i class="devicon-pandas-plain colored"></i>Pandas</li>
+                    <li class="chip">SQL</li>
+                    <li class="chip">Power BI</li>
+                    <li class="chip"><i class="devicon-numpy-plain colored"></i>NumPy</li>
+                    <li class="chip"><i class="devicon-matplotlib-plain colored"></i>Matplotlib</li>
+                    <li class="chip">Seaborn</li>
+                    <li class="chip"><i class="devicon-jupyter-plain colored"></i>Jupyter</li>
+                    <li class="chip chip--familiar">Machine learning</li>
+                </ul>
             </div>
-            <div class="project-box">
-                <i class="uil uil-award"></i>
-                <h3>Experience</h3>
-                <label>7+ Years in the field</label>
+            <div class="spotlight skills-box reveal">
+                <h3><i class="uil uil-server"></i> Backend</h3>
+                <ul class="chip-list">
+                    <li class="chip"><i class="devicon-nodejs-plain colored"></i>Node.js</li>
+                    <li class="chip"><i class="devicon-express-original"></i>Express.js</li>
+                    <li class="chip">REST APIs</li>
+                    <li class="chip">JWT authentication</li>
+                </ul>
+            </div>
+            <div class="spotlight skills-box reveal">
+                <h3><i class="uil uil-database"></i> Databases</h3>
+                <ul class="chip-list">
+                    <li class="chip"><i class="devicon-mongodb-plain colored"></i>MongoDB</li>
+                    <li class="chip"><i class="devicon-mysql-original colored"></i>MySQL</li>
+                    <li class="chip"><i class="devicon-firebase-plain colored"></i>Firebase</li>
+                </ul>
+            </div>
+            <div class="spotlight skills-box reveal">
+                <h3><i class="uil uil-code-branch"></i> DevOps</h3>
+                <ul class="chip-list">
+                    <li class="chip"><i class="devicon-git-plain colored"></i>Git</li>
+                    <li class="chip"><i class="devicon-github-original"></i>GitHub</li>
+                    <li class="chip"><i class="devicon-githubactions-plain colored"></i>GitHub Actions</li>
+                    <li class="chip"><i class="devicon-firebase-plain colored"></i>Firebase deployment</li>
+                    <li class="chip">Vercel</li>
+                    <li class="chip chip--familiar">CI/CD</li>
+                </ul>
+            </div>
+            <div class="spotlight skills-box reveal">
+                <h3><i class="uil uil-robot"></i> AI</h3>
+                <ul class="chip-list">
+                    <li class="chip">AI chatbot integration</li>
+                    <li class="chip">AI APIs</li>
+                    <li class="chip">OpenRouter</li>
+                    <li class="chip">Claude</li>
+                    <li class="chip">AI agents</li>
+                    <li class="chip">Prompt engineering</li>
+                </ul>
+            </div>
+            <div class="spotlight skills-box skills-wide reveal">
+                <h3><i class="uil uil-megaphone"></i> Digital Marketing &amp; CRM</h3>
+                <ul class="chip-list">
+                    <li class="chip">Growth marketing</li>
+                    <li class="chip">Email marketing</li>
+                    <li class="chip">SMS marketing</li>
+                    <li class="chip">SEO</li>
+                    <li class="chip">Marketing analytics</li>
+                    <li class="chip">Customer lifecycle</li>
+                    <li class="chip"><i class="devicon-google-plain colored"></i>Google Analytics</li>
+                    <li class="chip">HubSpot</li>
+                    <li class="chip">Brevo</li>
+                    <li class="chip">Africa's Talking</li>
+                    <li class="chip">Metabase</li>
+                    <li class="chip">CAMS</li>
+                </ul>
+            </div>
+            <div class="spotlight skills-box reveal">
+                <h3><i class="uil uil-plug"></i> APIs &amp; Integrations</h3>
+                <ul class="chip-list">
+                    <li class="chip">REST APIs</li>
+                    <li class="chip">M-Pesa APIs</li>
+                    <li class="chip">Co-op Bank APIs</li>
+                    <li class="chip">Africa's Talking</li>
+                    <li class="chip">Brevo</li>
+                    <li class="chip">Webhooks</li>
+                </ul>
+            </div>
+            <div class="spotlight skills-box reveal">
+                <h3><i class="uil uil-wrench"></i> Tools</h3>
+                <ul class="chip-list">
+                    <li class="chip"><i class="devicon-vscode-plain colored"></i>VS Code</li>
+                    <li class="chip"><i class="devicon-github-original"></i>GitHub</li>
+                    <li class="chip"><i class="devicon-replit-plain colored"></i>Replit</li>
+                    <li class="chip">OpenCode</li>
+                </ul>
+            </div>
+          </div>
+       </section>
+
+       <!-- -------------- PROJECTS ---------------- -->
+       <section class="section" id="projects">
+          <div class="top-header reveal">
+            <p class="eyebrow">03 · Projects</p>
+            <h2>Things I've Built</h2>
+          </div>
+
+          <!-- Featured project: facts taken from the siele-tech/chama-web-app repository -->
+          <article class="spotlight project-card project-featured reveal">
+            <a href="https://chama-web-app-eight.vercel.app" class="project-shot" target="_blank" rel="noopener" aria-label="Open the Chama Web App live demo">
+                <img src="assets/images/chama-web-app.jpg" alt="Chama Web App landing page: 'Your goals are bigger when you grow together' with a community savings-goal card" width="1200" height="750" loading="lazy">
+            </a>
+            <div class="project-main">
+                <div class="project-top">
+                    <span class="project-type">Web platform</span>
+                    <span class="status-live">Live</span>
+                </div>
+                <h3>Chama Web App</h3>
+                <p class="project-desc">
+                    A web platform for chamas (savings groups) in Kenya. It starts with a guided
+                    group-and-member onboarding flow and has sections for contributions, loans,
+                    savings goals and statements.
+                </p>
+                <ul class="feature-list">
+                    <li>6-step group registration that keeps form state between steps</li>
+                    <li>Kenya-specific validation: +254 phone numbers, national IDs, all 47 counties and their constituencies</li>
+                    <li>Bulk member import from CSV or Excel with drag-and-drop</li>
+                    <li>Group admin roles and Co-op Bank branch selection</li>
+                </ul>
+                <ul class="tag-list">
+                    <li>Next.js</li><li>React</li><li>TypeScript</li><li>Tailwind CSS</li>
+                    <li>shadcn/ui</li><li>Zustand</li><li>TanStack Query</li><li>Vercel</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://chama-web-app-eight.vercel.app" class="btn blue-btn" target="_blank" rel="noopener">Live demo <i class="uil uil-external-link-alt"></i></a>
+                    <a href="https://github.com/siele-tech/chama-web-app" class="btn btn-outline" target="_blank" rel="noopener"><i class="uil uil-github-alt"></i> Code</a>
+                </div>
+            </div>
+          </article>
+
+          <div class="project-grid">
+            <!-- TODO: add the tech stack and a GitHub link for Campus Care -->
+            <article class="spotlight project-card reveal">
+                <span class="project-icon"><i class="uil uil-comments-alt"></i></span>
+                <div class="project-top">
+                    <span class="project-type">Web app · AI</span>
+                </div>
+                <h3>Campus Care</h3>
+                <p class="project-desc">
+                    An online grievance redressal system for campus issues, with an AI chatbot
+                    that answers frequently asked questions.
+                </p>
+                <ul class="feature-list">
+                    <li>Online submission and redressal of grievances</li>
+                    <li>AI chatbot for frequently asked questions</li>
+                </ul>
+                <ul class="tag-list">
+                    <li>AI chatbot integration</li>
+                </ul>
+            </article>
+
+            <!-- TODO: add features, tech stack and a GitHub link for the Hospital Management System -->
+            <article class="spotlight project-card reveal">
+                <span class="project-icon"><i class="uil uil-hospital"></i></span>
+                <div class="project-top">
+                    <span class="project-type">Management system</span>
+                </div>
+                <h3>Hospital Management System</h3>
+                <p class="project-desc">
+                    A system designed to support hospital management processes.
+                </p>
+            </article>
+
+            <!-- TODO: add the tech stack (e.g. Python libraries used) once confirmed -->
+            <article class="spotlight project-card reveal">
+                <span class="project-icon"><i class="uil uil-chart-growth"></i></span>
+                <div class="project-top">
+                    <span class="project-type">Final-year project · Data</span>
+                </div>
+                <h3>NSE Stock Market Prediction</h3>
+                <p class="project-desc">
+                    A sentiment analysis-based stock-market prediction system for the NSE, combining
+                    stock-market data with sentiment analysis of social-media posts.
+                </p>
+                <ul class="tag-list">
+                    <li>Sentiment analysis</li><li>Stock-market data</li><li>Prediction</li>
+                </ul>
+                <div class="project-links">
+                    <a href="#data" class="btn btn-text">How it works <i class="uil uil-arrow-down"></i></a>
+                </div>
+            </article>
+          </div>
+       </section>
+
+       <!-- -------------- DATA ANALYTICS ---------------- -->
+       <section class="section section-alt" id="data">
+          <div class="top-header reveal">
+            <p class="eyebrow">04 · Data</p>
+            <h2>The Data Side</h2>
+            <p class="section-sub">Alongside building applications, I work with data: cleaning it, asking questions of it and presenting what it shows.</p>
+          </div>
+          <div class="row data-row">
+            <div class="col reveal">
+                <ul class="capability-list">
+                    <li>
+                        <i class="uil uil-filter"></i>
+                        <div>
+                            <h4>Data cleaning</h4>
+                            <p>Preparing raw, messy data for analysis with Python and Pandas.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="uil uil-search-alt"></i>
+                        <div>
+                            <h4>Analysis</h4>
+                            <p>Exploring and querying data with Pandas and SQL.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="uil uil-chart-bar"></i>
+                        <div>
+                            <h4>Visualisation</h4>
+                            <p>Charts and dashboards with Matplotlib, Seaborn and Power BI.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="uil uil-comment-alt-lines"></i>
+                        <div>
+                            <h4>Sentiment analysis</h4>
+                            <p>Measuring opinion in text such as social-media posts.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col data-cases reveal">
+                <article class="spotlight case-card">
+                    <p class="eyebrow">Key example · Final-year project</p>
+                    <h3>NSE Stock Market Prediction</h3>
+                    <p>Two kinds of data feed one prediction: market data and the mood of social-media posts about it.</p>
+                    <!-- sentiment comes from the posts; it is combined with market data to make the prediction -->
+                    <div class="pipeline" role="img" aria-label="Social-media posts go through sentiment analysis; the sentiment is combined with stock-market data to make a prediction">
+                        <span class="node p-market"><i class="uil uil-chart-line"></i> Stock-market data</span>
+                        <span class="node p-posts"><i class="uil uil-comments"></i> Social-media posts</span>
+                        <span class="p-line"></span>
+                        <i class="uil uil-arrow-down pipeline-arrow p-down"></i>
+                        <span class="node node-accent p-sentiment"><i class="uil uil-comment-alt-lines"></i> Sentiment analysis</span>
+                        <span class="p-merge"></span>
+                        <span class="node node-dark p-predict"><i class="uil uil-crosshair"></i> Prediction</span>
+                    </div>
+                </article>
+
+                <!-- facts taken from the siele-tech/covid19-global-tracker repository -->
+                <article class="spotlight case-card case-small">
+                    <div class="case-head">
+                        <h3>COVID-19 Global Data Tracker</h3>
+                        <a href="https://github.com/siele-tech/covid19-global-tracker" class="icon-link" target="_blank" rel="noopener" aria-label="COVID-19 Global Data Tracker on GitHub"><i class="uil uil-github-alt"></i></a>
+                    </div>
+                    <p>Compares COVID-19 cases, deaths and vaccination progress across countries using Our World in Data, with visual analysis in a Jupyter notebook.</p>
+                    <ul class="tag-list">
+                        <li>Python</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Seaborn</li><li>Jupyter</li>
+                    </ul>
+                </article>
+            </div>
+          </div>
+       </section>
+
+       <!-- -------------- JOURNEY / EXPERIENCE ---------------- -->
+       <section class="section" id="journey">
+          <div class="top-header reveal">
+            <p class="eyebrow">05 · Journey</p>
+            <h2>Experience &amp; Education</h2>
+          </div>
+          <div class="row">
+            <div class="col journey-col reveal">
+                <h3 class="journey-title"><i class="uil uil-briefcase-alt"></i> Experience</h3>
+                <ol class="timeline">
+                    <!-- TODO: add dates -->
+                    <li>
+                        <h4>Wakandi Labs</h4>
+                        <p class="timeline-meta">Growth Hacker &amp; Software Developer</p>
+                        <ul class="feature-list">
+                            <li>Contributed to CRM and product development across both growth and software</li>
+                            <li>Worked on API and webhook integrations</li>
+                            <li>Growth marketing across the customer lifecycle: email, SMS and SEO</li>
+                            <li>Analytics and reporting, including marketing analytics</li>
+                            <li>Team workflows with Git and GitHub; worked with Firebase, with exposure to CI/CD, DNS and subdomains, and reverse proxies</li>
+                        </ul>
+                        <ul class="tag-list">
+                            <li>Growth</li><li>CRM</li><li>APIs</li><li>Webhooks</li><li>Analytics</li><li>Git/GitHub</li><li>Firebase</li>
+                        </ul>
+                    </li>
+                    <!-- TODO: add dates -->
+                    <li>
+                        <h4>Tegat Tea Factory</h4>
+                        <p class="timeline-meta">IT attachment</p>
+                        <ul class="feature-list">
+                            <li>Helped monitor and manage production information systems to keep operations running smoothly</li>
+                            <li>Supported data entry, backups and database management for production and inventory records</li>
+                            <li>Took part in system upgrades and installations, and trained staff on IT tools</li>
+                            <li>Maintained data security and integrity through regular system checks and IT policy compliance</li>
+                            <li>Collected, cleaned and analysed tea production and grower data to support operational decisions and more accurate reporting</li>
+                            <li>Supported SACCO data management: verifying member records, processing information and keeping digital records accurate</li>
+                        </ul>
+                        <ul class="tag-list">
+                            <li>IT support</li><li>Database management</li><li>Data cleaning</li><li>Data analysis</li><li>Reporting</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <div class="col journey-col reveal">
+                <h3 class="journey-title"><i class="uil uil-graduation-cap"></i> Education &amp; Training</h3>
+                <ol class="timeline">
+                    <!-- TODO: add dates -->
+                    <li>
+                        <h4>Power Learn Project</h4>
+                        <p class="timeline-meta">Full-Stack Development</p>
+                        <p>Full-stack web development training focused on the MERN stack: MongoDB, Express.js, React and Node.js.</p>
+                    </li>
+                    <li>
+                        <h4>BSc Information Technology</h4>
+                        <p class="timeline-meta">Multimedia University of Kenya · 2026</p>
+                        <p>Final-year project: sentiment analysis-based stock-market prediction for the NSE.</p>
+                    </li>
+                </ol>
             </div>
           </div>
        </section>
 
        <!-- -------------- CONTACT BOX ---------------- -->
-
        <section class="section" id="contact">
-          <div class="top-header">
-            <h1>Get in touch</h1>
-            <span>Do you have a project in your mind, contact me here</span>
+          <div class="top-header reveal">
+            <p class="eyebrow">06 · Contact</p>
+            <h2>Get in Touch</h2>
+            <p class="section-sub">I'm looking for full-stack development and data analyst roles. If you're hiring, I'd love to hear from you.</p>
           </div>
           <div class="row">
-             <div class="col">
+             <div class="col reveal">
                 <div class="contact-info">
-                    <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-                    <p><i class="uil uil-envelope"></i> Email: john@doe.com</p>
-                    <p><i class="uil uil-phone"></i> Tel: +250 708 770 000</p>
+                    <h3>Find Me <i class="uil uil-corner-right-down"></i></h3>
+                    <p><i class="uil uil-envelope"></i> <a href="mailto:junechepkorir2004@gmail.com">junechepkorir2004@gmail.com</a></p>
+                    <p><i class="uil uil-github-alt"></i> <a href="https://github.com/siele-tech" target="_blank" rel="noopener">github.com/siele-tech</a></p>
+                    <button type="button" class="copy-btn" data-copy="junechepkorir2004@gmail.com">
+                        <i class="uil uil-copy"></i> <span>Copy email</span>
+                    </button>
                 </div>
              </div>
-             <div class="col">
-                <div class="form-control">
+             <div class="col reveal">
+                <form class="form-control" id="contactForm" data-email="junechepkorir2004@gmail.com">
                     <div class="form-inputs">
-                        <input type="text" class="input-field" placeholder="Name">
-                        <input type="text" class="input-field" placeholder="Email">
+                        <input type="text" name="name" class="input-field" placeholder="Name" aria-label="Name" autocomplete="name" required>
+                        <input type="email" name="email" class="input-field" placeholder="Email" aria-label="Email" autocomplete="email" required>
                     </div>
-                    <div class="text-area">
-                        <textarea placeholder="Message"></textarea>
-                    </div>
+                    <textarea name="message" placeholder="Message" aria-label="Message" required></textarea>
                     <div class="form-button">
-                        <button class="btn">Send <i class="uil uil-message"></i></button>
+                        <button type="submit" class="btn blue-btn">Send <i class="uil uil-message"></i></button>
                     </div>
-                </div>
+                </form>
              </div>
           </div>
        </section>
@@ -214,45 +548,25 @@
     <!-- --------------- FOOTER --------------- -->
     <footer>
         <div class="top-footer">
-            <p>John Doe .</p>
+            <p>June Siele<span>.</span></p>
         </div>
-        <div class="middle-footer">
-            <ul class="footer-menu">
-                <li class="footer_menu_list">
-                    <a href="#home">Home</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#about">About</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#projects">Projects</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
+        <ul class="footer-menu">
+            <li class="footer_menu_list"><a href="#about">About</a></li>
+            <li class="footer_menu_list"><a href="#skills">Skills</a></li>
+            <li class="footer_menu_list"><a href="#projects">Projects</a></li>
+            <li class="footer_menu_list"><a href="#data">Data</a></li>
+            <li class="footer_menu_list"><a href="#journey">Journey</a></li>
+            <li class="footer_menu_list"><a href="#contact">Contact</a></li>
+        </ul>
         <div class="footer-social-icons">
-            <div class="icon"><i class="uil uil-instagram"></i></div>
-            <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
-            <div class="icon"><i class="uil uil-dribbble"></i></div>
-            <div class="icon"><i class="uil uil-github-alt"></i></div>
+            <a href="https://github.com/siele-tech" class="icon" target="_blank" rel="noopener" aria-label="GitHub"><i class="uil uil-github-alt"></i></a>
         </div>
         <div class="bottom-footer">
-            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">June Siele</a> - All rights reserved</p>
+            <p>Copyright &copy; <span id="year">2026</span> <a href="#home">June Siele</a> · All rights reserved</p>
         </div>
     </footer>
 
     </div>
-
-
-
-
-    <!-- ----- TYPING JS Link ----- -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-       <!-- ----- SCROLL REVEAL JS Link----- -->
-    <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- ----- MAIN JS ----- -->
     <script src="assets/js/main.js"></script>
